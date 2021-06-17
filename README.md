@@ -1,5 +1,8 @@
 # work_day_scheduler
 
+## Description
+App allows users to save notes to day-time hours, to easily schedule their current day. App saves to local storage and highlights the current hour.
+
 ## PAGE CONSTRUCTION
 * displayed current day using "moment" JS Library
 * created rows by iterating over array filled with time values.
