@@ -3,6 +3,12 @@
 ## Description
 App allows users to save notes to day-time hours, to easily schedule their current day. App saves to local storage and highlights the current hour.
 
+## Usage
+Open index.html in browser or visit deployed link. Saves are local so will not be seen by others.
+
+## Installation
+Nothing to be installed, bootstrap, fontawesome, googleapi and JQuery are called in html.
+
 ## PAGE CONSTRUCTION
 * displayed current day using "moment" JS Library
 * created rows by iterating over array filled with time values.
