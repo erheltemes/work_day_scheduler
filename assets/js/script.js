@@ -4,28 +4,28 @@ var arrayTime = ["8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM", "12:00 PM", "1:00
 $('#currentDay').text(moment().format("dddd, MMMM Do"))
 
 //layout rows with attributes
-arrayTime.forEach(function(e, i) {
+arrayTime.forEach(function (e, i) {
     $('.container')
         .append($('<div>').addClass('time-block')
             .append($('<div>').addClass('row')
                 .append($('<div>').addClass('hour col-2 ').text(e)
                 )
-                .append($('<textarea>').addClass('textarea col-8').attr('id', i) 
-                )    
+                .append($('<textarea>').addClass('textarea col-8').attr('id', i)
+                )
                 .append($('<div>').addClass('saveBtn col-2')
                     .append($('<i>').addClass("fas fa-save fa-2x ")
-                    ) 
+                    )
                 )
             )
         )
 })
 
 //initial call on load
-setMomentColors ()
+setMomentColors()
 
 //set past, present, and future classes
-function setMomentColors () {
-    arrayTime.forEach(function(e, i) {
+function setMomentColors() {
+    arrayTime.forEach(function (e, i) {
         if (moment().get('hour') - 8 > i) {
             $("#" + i).addClass('past')
         }
@@ -35,21 +35,17 @@ function setMomentColors () {
         if (moment().get('hour') - 8 == i) {
             $("#" + i).addClass('present')
         }
-    })  
+    })
 }
 
 //Reset colors when hour changes
 var hourOnLoad = moment().hour()
-setInterval(function() { 
+setInterval(function () {
     if (moment().hour() !== hourOnLoad) {
         hourOnLoad = moment().hour()
-        setMomentColors ()
+        setMomentColors()
     }
 }, 5000);
-
-
-
-
 
 //pull local storage array or create on if its empty
 var savedText = JSON.parse(localStorage.getItem("localSave"))
@@ -58,14 +54,14 @@ if (savedText === null) {
 }
 
 //put in saved text on load
-savedText.forEach(function(e, i) {
+savedText.forEach(function (e, i) {
     if (e !== null) {
         $("#" + i).text(savedText[i])
     }
 })
 
 //save content when button is clicked
-$('.container').on("click", ".saveBtn", function() {
+$('.container').on("click", ".saveBtn", function () {
     let textareaSelect = $(this).siblings().eq(1)
     savedText[textareaSelect.attr("id")] = textareaSelect.val()
     // save text value at the index value of "id"
