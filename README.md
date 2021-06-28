@@ -9,7 +9,7 @@ Open index.html in browser or visit deployed link. Save is local, so it will not
 ## Installation
 Nothing to be installed. Bootstrap, FontAwesome, GoogleApi and JQuery are called in html file.
 
-##Screenshot
+## Screenshot
 ![Alt text](./assets/imgs/scheduler_1.PNG?raw=true "Preview image of Scheduler")
 
 SITE LINK: https://erheltemes.github.io/work_day_scheduler/
