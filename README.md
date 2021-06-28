@@ -1,7 +1,7 @@
 # work_day_scheduler
 
 ## Description
-App allows users to save notes to day-time hours, to easily schedule their current day. App saves to local storage and highlights the current hour.
+App allows user to save notes to day-time hours, to easily schedule their current day. App saves to local storage and highlights the current hour.
 
 ## Usage
 Open index.html in browser or visit deployed link. Saves are local so will not be seen by others.
